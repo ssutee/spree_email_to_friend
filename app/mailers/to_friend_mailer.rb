@@ -1,5 +1,4 @@
 class ToFriendMailer < ActionMailer::Base
-
   def mail_to_friend(object, mail_to_friend)
     @object = object
     @mail = mail_to_friend

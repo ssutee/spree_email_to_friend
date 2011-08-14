@@ -1,17 +1,20 @@
 <%= mail.recipient_name %>,
 <br />
 <br />
-<%= t(:you_would_like_this) %>:
+ฉันคิดว่าคุณน่าจะชอบสินค้านี้
 <br />
   * <%= product.name %>
 <% unless mail.message.blank? -%>
-<%= mail.message %>
+  <br />
+  <br />
+  <%= mail.message %>
 <% end -%>
 <br />
 <br />
 <%= mail.sender_name %>
 <br />
-Click the link below to view the <%= product.name %> page.
+<br />
+คลิ๊กที่ลิงก์ข้างล่างเพื่อดู <%= product.name %> <br />
 <%= product_url(product) %>
 <br />
-For more online shopping, visit <%= products_url %>
+เลือกซื้อสินค้ารายการอื่นๆ ได้ที่ <%= products_url %>
