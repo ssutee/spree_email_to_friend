@@ -1,16 +1,17 @@
 <%= mail.recipient_name %>,
-
-I think you would like this item:
-
+<br />
+<br />
+<%= t(:you_would_like_this) %>:
+<br />
   * <%= product.name %>
-
 <% unless mail.message.blank? -%>
 <%= mail.message %>
 <% end -%>
-
+<br />
+<br />
 <%= mail.sender_name %>
-
+<br />
 Click the link below to view the <%= product.name %> page.
 <%= product_url(product) %>
-
+<br />
 For more online shopping, visit <%= products_url %>

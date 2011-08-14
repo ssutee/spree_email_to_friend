@@ -36,7 +36,8 @@ class EmailSenderController < Spree::BaseController
 
   #extract send message to make easier to override
   def send_message(object, mail_to_friend)
-    ToFriendMailer.deliver_mail_to_friend(object,@mail_to_friend)
+    #ToFriendMailer.mail_to_friend(object,@mail_to_friend).deliver
+    ToFriendMailer.delay.mail_to_friend(object,@mail_to_friend)
   end
 
   def find_object
